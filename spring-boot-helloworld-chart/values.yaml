@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: "kisaron5/springboot"
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+deployment:
+  name: spring-boot-helloworld
+  port: 9091
+
+service:
+  name: spring-boot-helloworld
+  type: NodePort
+  port: 9091
+  nodePort: 31000
